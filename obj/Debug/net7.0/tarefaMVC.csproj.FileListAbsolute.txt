@@ -1,0 +1,15 @@
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\bin\Debug\net7.0\tarefaMVC.exe
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\bin\Debug\net7.0\tarefaMVC.deps.json
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\bin\Debug\net7.0\tarefaMVC.runtimeconfig.json
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\bin\Debug\net7.0\tarefaMVC.dll
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\bin\Debug\net7.0\tarefaMVC.pdb
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.csproj.AssemblyReference.cache
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.AssemblyInfoInputs.cache
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.AssemblyInfo.cs
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.csproj.CoreCompileInputs.cache
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.dll
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\refint\tarefaMVC.dll
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.pdb
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\tarefaMVC.genruntimeconfig.cache
+C:\Users\Facu\Documents\3ª FASE\DESKTOP\tarefaMVC\obj\Debug\net7.0\ref\tarefaMVC.dll
