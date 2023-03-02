@@ -1,14 +1,16 @@
 ﻿using System;
+using View;
 
-namespace View
+namespace Menu
 {
-    public class Menu
+    class Menu
     {
-        public static void Show()
+        static void Main(string[] args)
         {
             int opcao;
             do
             {
+                Console.WriteLine("==================================");
                 Console.WriteLine("1 - Cadastrar Cidade");
                 Console.WriteLine("2 - Listar Cidades");
                 Console.WriteLine("3 - Editar Cidade");
@@ -35,16 +37,10 @@ namespace View
                         Controllers.CidadeController.ListarCidades();
                         break;
                     case 3:
-                        Console.WriteLine("Digite o id da cidade que deseja editar: ");
-                        int id = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Digite o novo nome da cidade: ");
-                        string nome = Console.ReadLine();
-                        Controllers.CidadeController.EditarCidade(id, nome);
+                        CidadeView.EditarCidade();
                         break;
                     case 4:
-                        Console.WriteLine("Digite o id da cidade que deseja excluir: ");
-                        int idExcluir = int.Parse(Console.ReadLine());
-                        Controllers.CidadeController.ExcluirCidade(idExcluir);
+                        CidadeView.ExcluirCidade();
                         break;
                     case 5:
                         CaminhaoView.Show();
@@ -53,18 +49,10 @@ namespace View
                         Controllers.CaminhaoController.ListarCaminhoes();
                         break;
                     case 7:
-                        Console.WriteLine("Digite o id do caminhão que deseja editar: ");
-                        int idCaminhao = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Digite a nova placa do caminhão: ");
-                        string placa = Console.ReadLine();
-                        Console.WriteLine("Digite o novo nome do motorista: ");
-                        string motorista = Console.ReadLine();
-                        Controllers.CaminhaoController.EditarCaminhao(idCaminhao, placa, motorista);
+                        CaminhaoView.EditarCaminhao();
                         break;
                     case 8:
-                        Console.WriteLine("Digite o id do caminhão que deseja excluir: ");
-                        int idExcluirCaminhao = int.Parse(Console.ReadLine());
-                        Controllers.CaminhaoController.ExcluirCaminhao(idExcluirCaminhao);
+                        CaminhaoView.ExcluirCaminhao();
                         break;
                     case 9:
                         RotaView.Show();
@@ -73,14 +61,10 @@ namespace View
                         Controllers.RotaController.ListarRotas();
                         break;
                     case 11:
-                        Console.WriteLine("Digite o id da rota que deseja editar: ");
-                        int idRota = int.Parse(Console.ReadLine());
-                        Controllers.RotaController.EditarRota(idRota);
+                        RotaView.EditarRota();
                         break;
                     case 12:
-                        Console.WriteLine("Digite o id da rota que deseja excluir: ");
-                        int idExcluirRota = int.Parse(Console.ReadLine());
-                        Controllers.RotaController.ExcluirRota(idExcluirRota);
+                        RotaView.ExcluirRota();
                         break;
                     case 0:
                         Console.WriteLine("Obrigado por utilizar nosso sistema!");

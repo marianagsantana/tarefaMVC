@@ -2,43 +2,52 @@ namespace Models
 {
     public class Caminhao 
     {
-        public int Id {get; set; }
+        public int id {get; set; }
 
-        public string Placa {get; set; }
+        public string placa {get; set; }
 
-        public string Motorista { get; set;}
+        public string motorista { get; set;}
 
-        public static List<Caminhao> Caminhoes = new List<Caminhao>();
+        public static List<Caminhao> caminhoes = new List<Caminhao>();
 
         public Caminhao(int id, string placa, string motorista)
         {
-            Id = id;
-            Placa = placa;
-            Motorista = motorista;
-            Caminhoes.Add(this);
+            this.id = id;
+            this.placa = placa;
+            this.motorista = motorista;
+            caminhoes.Add(this);
         }
         public static void ListarCaminhoes(){
-            foreach(Models.Caminhao caminhao in Models.Caminhao.Caminhoes){
-                Console.WriteLine($"Id: {caminhao.Id} - Placa: {caminhao.Placa} - Motorista: {caminhao.Motorista}");
+            foreach(Models.Caminhao caminhao in Models.Caminhao.caminhoes){
+                Console.WriteLine($"id: {caminhao.id} - placa: {caminhao.placa} - motorista: {caminhao.motorista}");
             }
         }
 
         public static void EditarCaminhao(int id, string placa, string motorista){
-            foreach(Models.Caminhao caminhao in Models.Caminhao.Caminhoes){
-                if(caminhao.Id == id){
-                    caminhao.Placa = placa;
-                    caminhao.Motorista = motorista;
+            foreach(Models.Caminhao caminhao in Models.Caminhao.caminhoes){
+                if(caminhao.id == id){
+                    caminhao.placa = placa;
+                    caminhao.motorista = motorista;
                 }
             }
         }
 
         public static void ExcluirCaminhao(int id){
-            foreach(Models.Caminhao caminhao in Models.Caminhao.Caminhoes){
-                if(caminhao.Id == id){
-                    Models.Caminhao.Caminhoes.Remove(caminhao);
+            foreach(Models.Caminhao caminhao in Models.Caminhao.caminhoes){
+                if(caminhao.id == id){
+                    Models.Caminhao.caminhoes.Remove(caminhao);
                     break;
                 }
             }
+        }
+
+        public static Caminhao BuscarCaminhao(int id){
+            foreach(Models.Caminhao caminhao in Models.Caminhao.caminhoes){
+                if(caminhao.id == id){
+                    return caminhao;
+                }
+            }
+            return null;
         }
     }
 }

@@ -1,50 +1,63 @@
+
 namespace Models
 {
     public class Rota 
     {
-        public int Id {get; set; }
+        public int id {get; set; }
+        public string data {get; set; }
 
-        public int idCaminhao {get; set; }
-        public string Partida {get; set; }
-        public string Chegada {get; set; }
-        public string Data {get; set; }
+        public Caminhao caminhao {get; set; }
+        
+        public Cidade cidadePartida {get; set; }
+
+        public Cidade cidadeChegada {get; set; }
         //create a collection to store the rota
-        public static List<Rota> Rotas = new List<Rota>();
+        public static List<Rota> rotas = new List<Rota>();
 
 
-        public Rota(int id, int idCaminhao, string partida, string chegada, string data)
+        public Rota(int id, string data, Caminhao caminhao, Cidade partida, Cidade chegada)
         {
-            Id = id;
-            Partida = partida;
-            Chegada = chegada;
-            Data = data;
-            Rotas.Add(this);
+            this.id = id;
+            this.data = data;
+            this.caminhao = caminhao;
+            this.cidadePartida = partida;
+            this.cidadeChegada = chegada;
+            rotas.Add(this);
         }
 
         public static void ListarRotas(){
-            foreach(Models.Rota rota in Models.Rota.Rotas){
-                Console.WriteLine($"Id: {rota.Id} - Id do caminhão: {rota.idCaminhao} - Partida: {rota.Partida} - Chegada: {rota.Chegada} - Data: {rota.Data}");
+            foreach(Models.Rota rota in Models.Rota.rotas){
+                Console.WriteLine($"Id: {rota.id} - Data: {rota.data} - Caminhao: {rota.caminhao.placa} - Partida: {rota.cidadePartida.nome} - Chegada: {rota.cidadeChegada.nome}");
             }
         }
 
-        public static void EditarRota(int id, int idCaminhao,  string partida,  string chegada, string data){
-            foreach(Models.Rota rota in Models.Rota.Rotas){
-                if(rota.Id == id){
-                    rota.idCaminhao = idCaminhao;
-                    rota.Partida = partida;
-                    rota.Chegada = chegada;
-                    rota.Data = data;
+        public static void EditarRota(int id, string data, Caminhao caminhao, Cidade partida, Cidade chegada){
+            foreach(Models.Rota rota in Models.Rota.rotas){
+                if(rota.id == id){
+                    rota.data = data;
+                    rota.caminhao = caminhao;
+                    rota.cidadePartida = partida;
+                    rota.cidadeChegada = chegada;
                 }
             }
         }
 
         public static void ExcluirRota(int id){
-            foreach(Models.Rota rota in Models.Rota.Rotas){
-                if(rota.Id == id){
-                    Models.Rota.Rotas.Remove(rota);
+            foreach(Models.Rota rota in Models.Rota.rotas){
+                if(rota.id == id){
+                    Models.Rota.rotas.Remove(rota);
                     break;
                 }
             }
+        }
+
+        public static Rota BuscarRota(int id){
+            foreach(Models.Rota rota in Models.Rota.rotas){
+                if(rota.id == id){
+                    return rota;
+                }
+            }
+            return null;
         }
     }
 }
