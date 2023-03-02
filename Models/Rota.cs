@@ -5,6 +5,7 @@ namespace Models
     {
         public int id {get; set; }
         public string data {get; set; }
+        public double preco {get; set; }
 
         public Caminhao caminhao {get; set; }
         
@@ -15,10 +16,11 @@ namespace Models
         public static List<Rota> rotas = new List<Rota>();
 
 
-        public Rota(int id, string data, Caminhao caminhao, Cidade partida, Cidade chegada)
+        public Rota(int id, string data, double preco, Caminhao caminhao, Cidade partida, Cidade chegada)
         {
             this.id = id;
             this.data = data;
+            this.preco = preco;
             this.caminhao = caminhao;
             this.cidadePartida = partida;
             this.cidadeChegada = chegada;
@@ -27,14 +29,15 @@ namespace Models
 
         public static void ListarRotas(){
             foreach(Models.Rota rota in Models.Rota.rotas){
-                Console.WriteLine($"Id: {rota.id} - Data: {rota.data} - Caminhao: {rota.caminhao.placa} - Partida: {rota.cidadePartida.nome} - Chegada: {rota.cidadeChegada.nome}");
+                Console.WriteLine($"Id: {rota.id} - Data: {rota.data} - Preco: {rota.preco} - Caminhao: {rota.caminhao.placa} - Partida: {rota.cidadePartida.nome} - Chegada: {rota.cidadeChegada.nome}");
             }
         }
 
-        public static void EditarRota(int id, string data, Caminhao caminhao, Cidade partida, Cidade chegada){
+        public static void EditarRota(int id, string data, double preco, Caminhao caminhao, Cidade partida, Cidade chegada){
             foreach(Models.Rota rota in Models.Rota.rotas){
                 if(rota.id == id){
                     rota.data = data;
+                    rota.preco = preco;
                     rota.caminhao = caminhao;
                     rota.cidadePartida = partida;
                     rota.cidadeChegada = chegada;

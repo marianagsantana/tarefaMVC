@@ -25,6 +25,7 @@ namespace Menu
                 Console.WriteLine("12 - Excluir Rota");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("Digite a opção desejada: ");
+                Console.WriteLine("==================================");
 
                 opcao = int.Parse(Console.ReadLine());
                 switch (opcao)

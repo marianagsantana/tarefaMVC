@@ -20,7 +20,9 @@ namespace View
             Cidade buscaCidadeChegada = Models.Cidade.BuscarCidade(idCaminhao);
             Console.WriteLine("Digite a data da rota: ");
             string data = Console.ReadLine();
-            Controllers.RotaController.CadastrarRota(id, data, buscaCaminhao, buscaCidadePartida, buscaCidadeChegada);
+            Console.WriteLine("Digite o preço da rota: ");
+            double preco = double.Parse(Console.ReadLine());
+            Controllers.RotaController.CadastrarRota(id, data, preco, buscaCaminhao, buscaCidadePartida, buscaCidadeChegada);
 
         }
 
@@ -44,7 +46,9 @@ namespace View
             Cidade buscaCidadeChegada = Models.Cidade.BuscarCidade(idCaminhao);
             Console.WriteLine("Digite a data da rota: ");
             string data = Console.ReadLine();
-            Controllers.RotaController.EditarRota(id, data, buscaCaminhao, buscaCidadePartida, buscaCidadeChegada);
+            Console.WriteLine("Digite o preço da rota: ");
+            double preco = double.Parse(Console.ReadLine());
+            Controllers.RotaController.EditarRota(id, data, preco, buscaCaminhao, buscaCidadePartida, buscaCidadeChegada);
         }
 
         public static void ExcluirRota()
