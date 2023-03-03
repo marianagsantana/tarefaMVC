@@ -23,6 +23,7 @@ namespace Menu
                 Console.WriteLine("10 - Listar Rotas");
                 Console.WriteLine("11 - Editar Rota");
                 Console.WriteLine("12 - Excluir Rota");
+                Console.WriteLine("13 - Listar a média do valor das Rotas");
                 Console.WriteLine("0 - Sair");
                 Console.WriteLine("Digite a opção desejada: ");
                 Console.WriteLine("==================================");
@@ -66,6 +67,9 @@ namespace Menu
                         break;
                     case 12:
                         RotaView.ExcluirRota();
+                        break;
+                    case 13:
+                        RotaView.MostrarMedia();
                         break;
                     case 0:
                         Console.WriteLine("Obrigado por utilizar nosso sistema!");

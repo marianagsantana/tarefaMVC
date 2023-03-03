@@ -8,10 +8,10 @@ namespace Controllers{
 
         public static void CadastrarRota(int id, string data, double preco, Caminhao idCaminhao,  Cidade partida,  Cidade chegada){
             Models.Rota novaRota = new Models.Rota(id, data, preco, idCaminhao, partida, chegada);
-            if(Caminhao.totalRotas(id) != 0){
+            if(Caminhao.totalRotas(novaRota.caminhao.id) != 0){
                 novaRota.caminhao.totalRota++;
             }
-            if(Caminhao.faturaTotal(id) != 0){
+            if(Caminhao.faturaTotal(novaRota.caminhao.id) != 0){
                 novaRota.caminhao.valorFaturado += preco;
             }
         }

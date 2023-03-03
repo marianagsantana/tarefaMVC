@@ -62,5 +62,15 @@ namespace Models
             }
             return null;
         }
+
+        public static double MediaDasRotas() {
+            double media = 0;
+            int totalRotas = 0;
+            foreach (Rota rota in rotas) {
+                media += rota.preco;
+                totalRotas++;
+            }
+            return media / totalRotas;
+        }
     }
 }

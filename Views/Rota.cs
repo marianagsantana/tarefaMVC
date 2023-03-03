@@ -57,5 +57,9 @@ namespace View
             int idExcluir = int.Parse(Console.ReadLine());
             Controllers.RotaController.ExcluirRota(idExcluir);
         }
+
+        public static void MostrarMedia() {
+            Console.WriteLine("Média: " + Models.Rota.MediaDasRotas());
+        }
     }
 }
